@@ -18,6 +18,9 @@
 # misc
 .DS_Store
 *.pem
+/.idea/
+/.sanity/
+/dist/
 
 # debug
 npm-debug.log*

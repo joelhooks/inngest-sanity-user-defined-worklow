@@ -3,25 +3,37 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"npm:dev:*\"",
+    "dev:next": "next dev",
+    "dev:inngest": "npx inngest-cli@latest dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/client": "^6.4.12",
+    "@sanity/image-url": "1",
+    "@sanity/orderable-document-list": "^1.1.0",
+    "@sanity/vision": "3",
+    "inngest": "^2.7.2",
+    "next": "13.5.4",
+    "next-sanity": "5",
     "react": "^18",
     "react-dom": "^18",
-    "next": "13.5.4"
+    "sanity": "3",
+    "styled-components": "5.2"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
+    "concurrently": "^8.2.1",
+    "encoding": "^0.1.13",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
     "postcss": "^8",
     "tailwindcss": "^3",
-    "eslint": "^8",
-    "eslint-config-next": "13.5.4"
+    "typescript": "^5"
   }
 }
