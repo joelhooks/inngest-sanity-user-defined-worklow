@@ -27,7 +27,7 @@ export default defineType({
             name: 'actions',
             title: 'Actions',
             type: 'array',
-            of: [{type: 'delay'}]
+            of: [{type: 'delay'}, {type:'filter'}, {type: 'sendEmail'}, {type: 'slack'}]
         })
     ]
 })
